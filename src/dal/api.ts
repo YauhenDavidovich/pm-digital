@@ -1,12 +1,12 @@
 import axios, {AxiosResponse} from "axios"
 
 const instance = axios.create({
-    baseURL: "http://135.181.30.244:27007/api/vacancies/vacancies/",
+    baseURL: "http://135.181.30.244:27007/api/vacancies/",
 })
 
 export const API = {
     getVacancies() {
-        return instance.get<AxiosResponse<VacanciesResponseType>>('vacancies', )
+        return instance.get<VacanciesResponseType>('vacancies', )
     }
 }
 

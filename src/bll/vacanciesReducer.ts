@@ -9,7 +9,6 @@ export const vacanciesReducer = (state: Array<Result> = initialState, action: Ac
     switch (action.type) {
         case SET_VACANCIES:
             return action.vacancies
-
         default:
             return state;
     }
@@ -19,15 +18,16 @@ export const vacanciesReducer = (state: Array<Result> = initialState, action: Ac
 const SET_VACANCIES = 'SET-VACANCIES';
 
 // Action Creators
-export const SetArticlesAC = (vacancies: Array<Result>) => ({
+export const SetVacanciesAC = (vacancies: Array<Result>) => ({
     type: SET_VACANCIES,
     vacancies,
 } as const);
 
-export const getArticlesTC = () => (dispatch: Dispatch) => {
+export const getVacanciesTC = () => (dispatch: Dispatch) => {
     API.getVacancies()
         .then(res => {
-            dispatch(SetArticlesAC(res.data.data.results))
+            debugger
+            dispatch(SetVacanciesAC(res.data.results))
         })
         .catch(err => {
             console.log(err)
@@ -35,5 +35,5 @@ export const getArticlesTC = () => (dispatch: Dispatch) => {
 }
 
 
-export type SetArticlesType = ReturnType<typeof SetArticlesAC>
-type ActionsTypes = SetArticlesType
+export type SetVacanciesType = ReturnType<typeof SetVacanciesAC>
+type ActionsTypes = SetVacanciesType

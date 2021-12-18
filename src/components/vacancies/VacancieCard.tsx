@@ -36,7 +36,7 @@ const StyledCardActions = styled(CardActions, {
 
 
 type VacancieCardType = {
-    id: number,
+    id: string,
     title: string,
 }
 
@@ -51,7 +51,7 @@ const VacanciesCard = (props: VacancieCardType) => {
                     Word of the Day
                 </Typography>
                 <Typography variant="h5" component="div">
-                    title
+                    {props.title}
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
                     adjective
