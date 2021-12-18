@@ -1,5 +1,6 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import thunkMiddleware from 'redux-thunk'
+import {vacanciesReducer} from "./vacanciesReducer";
 
 const rootReducer = combineReducers({
     vacancies: vacanciesReducer,
