@@ -2,13 +2,12 @@ import React from 'react';
 import FindCandidateHeader from "./FindCandidateHeader";
 
 
-const FindCandidate = () => {
+const FindCandidateFiltersContainer = () => {
     return (
         <div>
-            <FindCandidateHeader/>
-
+            FindCandidateFiltersContainer
         </div>
     )
 }
 
-export default FindCandidate;
+export default FindCandidateFiltersContainer;
