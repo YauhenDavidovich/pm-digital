@@ -2,13 +2,13 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {getVacanciesTC} from "../../bll/vacanciesReducer";
 import {AppRootStateType} from "../../bll/store";
-import {Result} from "../../dal/api";
+import {Vacancy} from "../../dal/api";
 import VacanciesCard from "./VacancieCard";
 
 
 const VacanciesContainer = () => {
     const dispatch = useDispatch()
-    const vacancies = useSelector<AppRootStateType, Array<Result>>(state => state.vacancies)
+    const vacancies = useSelector<AppRootStateType, Array<Vacancy>>(state => state.vacancies)
     useEffect(
         () => {
             dispatch(getVacanciesTC())

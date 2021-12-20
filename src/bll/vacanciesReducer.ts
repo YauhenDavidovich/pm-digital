@@ -1,11 +1,11 @@
 import {Dispatch} from "redux";
-import {API, Result} from "../dal/api";
+import {API, Vacancy} from "../dal/api";
 
 
-const initialState: Array<Result> = []
+const initialState: Array<Vacancy> = []
 
 //Reducer
-export const vacanciesReducer = (state: Array<Result> = initialState, action: ActionsTypes): Array<Result> => {
+export const vacanciesReducer = (state: Array<Vacancy> = initialState, action: ActionsTypes): Array<Vacancy> => {
     switch (action.type) {
         case SET_VACANCIES:
             return action.vacancies
@@ -18,7 +18,7 @@ export const vacanciesReducer = (state: Array<Result> = initialState, action: Ac
 const SET_VACANCIES = 'SET-VACANCIES';
 
 // Action Creators
-export const SetVacanciesAC = (vacancies: Array<Result>) => ({
+export const SetVacanciesAC = (vacancies: Array<Vacancy>) => ({
     type: SET_VACANCIES,
     vacancies,
 } as const);
