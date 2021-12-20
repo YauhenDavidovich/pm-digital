@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {store} from "./bll/store";
-import {createGlobalStyle} from "styled-components";
+import {createGlobalStyle, ThemeProvider} from "styled-components";
 
 
 const Global = createGlobalStyle`
@@ -15,19 +15,27 @@ const Global = createGlobalStyle`
   * {
     margin: 0 auto;
     padding: 0;
+    outline:0;
     box-sizing: border-box;
     font-family: "Montserrat";
   }`
+
+const theme = {
+    media: {
+        phone: "(max-width: 375px)"
+    }
+}
+
 
 
 ReactDOM.render(
     <React.StrictMode>
         <HashRouter>
             <Provider store={store}>
-                <>
+                <ThemeProvider theme={theme}>
                     <Global/>
                     <App/>
-                </>
+                </ThemeProvider>
             </Provider>
         </HashRouter>
     </React.StrictMode>,
