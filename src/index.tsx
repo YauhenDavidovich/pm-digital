@@ -6,12 +6,23 @@ import reportWebVitals from './reportWebVitals';
 import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {store} from "./bll/store";
+import styled, {createGlobalStyle} from "styled-components";
+
+const Global = createGlobalStyle`* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}`
+
 
 ReactDOM.render(
     <React.StrictMode>
         <HashRouter>
             <Provider store={store}>
-                <App/>
+                <>
+                    <Global/>
+                    <App/>
+                </>
             </Provider>
         </HashRouter>
     </React.StrictMode>,
