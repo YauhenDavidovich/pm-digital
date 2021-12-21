@@ -18,7 +18,7 @@ const StyledFlex = styled.div<StyledFlexProp>`
   flex-direction: ${props => props.direction || 'row'};
   align-items: ${props => props.align || 'stretch'};
   justify-content: ${props => props.justify || 'stretch'};
-  margin: ${({margin}) => margin || '0'};
+  margin: ${({margin}) => margin || '0 auto'};
   width: 100%;
   max-width: ${({maxWidth}) => maxWidth || 'none'};
   color: ${({color}) => color || 'black'};

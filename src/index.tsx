@@ -40,7 +40,8 @@ const theme = {
         secondary: "#2A172D",
     },
     media: {
-        phone: "(max-width: 375px)"
+        phone: "(min-width: 375px) and (max-width: 768px)",
+        tablet: "(min-width: 769px) and (max-width: 1240px)"
     }
 }
 

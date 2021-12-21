@@ -7,7 +7,7 @@ type StyledWrapperProp = {
 }
 
 const StyledWrapper = styled.div<StyledWrapperProp>`
-  width: 100%;
+  width: 100%;  
   background-color: ${({backgroundColor}) => backgroundColor || '#white'};
 `
 const BackgroundColorWrapper = (props: StyledWrapperProp) => {

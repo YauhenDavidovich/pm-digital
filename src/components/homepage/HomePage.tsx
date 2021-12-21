@@ -3,14 +3,16 @@ import {Link as RouterLink} from 'react-router-dom';
 import {Link} from "@mui/material";
 import Navbar from "../Navbar";
 import Banner from "./Banner";
+import VacanciesAmountBanner from "./VacanciesAmountBanner";
 
 const HomePage = () => {
     return (
         <>
-            <Navbar justify={"space-between"} />
+            <Navbar justify={"space-between"}/>
             <Banner/>
+            <VacanciesAmountBanner/>
 
-            </>
+        </>
 
     )
 }
