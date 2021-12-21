@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link as RouterLink} from 'react-router-dom';
-import {Link} from "@mui/material";
 import Navbar from "../Navbar";
 import Banner from "./Banner";
 import VacanciesAmountBanner from "./VacanciesAmountBanner";
+import Partners from "./Partners";
+import PlaceVacancy from "./PlaceVacancy";
 
 const HomePage = () => {
     return (
@@ -11,6 +11,8 @@ const HomePage = () => {
             <Navbar justify={"space-between"}/>
             <Banner/>
             <VacanciesAmountBanner/>
+            <Partners/>
+            <PlaceVacancy/>
 
         </>
 

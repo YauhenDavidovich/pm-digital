@@ -4,7 +4,8 @@ import styled from 'styled-components'
 type StyledTitleProps = {
     color?: string
     fontSize?: string
-    children: React.ReactNode;
+    children: React.ReactNode
+    alignSelf?: string
 }
 
 
@@ -12,6 +13,7 @@ const StyledTitle = styled.h1<StyledTitleProps>`
   color: ${props => props.color || props.theme.colors.primary};
   font-size: ${props => props.fontSize || '18px'};
   font-weight: 500;
+  align-self: ${props => props.alignSelf || 'auto'};;
   text-transform: uppercase;
   @media ${props => props.theme.media.phone} {
     font-size: 14px;
