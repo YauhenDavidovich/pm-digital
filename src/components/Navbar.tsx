@@ -57,7 +57,6 @@ const Navbar = (props: StyledNavbarProp) => {
                 <NavBarElement><Link component={RouterLink} to={"/"} color="white" underline="none">
                     {'Войти'}
                 </Link></NavBarElement>
-
             </FlexWrapper>
         </StyledNav>
     </BackgroundColorWrapper>

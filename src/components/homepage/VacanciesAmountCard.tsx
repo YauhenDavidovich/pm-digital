@@ -30,6 +30,11 @@ const StyledCard = styled.div<StyledCardProp>`
   height: ${({height}) => height || '396px'};
   width: 100%;
   max-width: 396px;
+  .line {
+    border-bottom: 1px solid #000046;
+    width: 84px;
+  }
+  
   @media ${props => props.theme.media.phone} {
     max-width: 335px;
     height: 260px;
@@ -47,10 +52,7 @@ const StyledCard = styled.div<StyledCardProp>`
 const VacanciesAmountCard = (props:StyledCardProp) => {
     return (
        <StyledCard {...props}>
-           <div style={{
-                   borderBottom: '1px solid #000046',
-                   width: "84px",
-               }}></div>
+           <div className={"line"}/>
            <div><h2>100422</h2></div>
            <div><h3>актуальных вакансий</h3></div>
 
