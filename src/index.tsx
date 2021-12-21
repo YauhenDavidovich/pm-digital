@@ -7,20 +7,38 @@ import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {store} from "./bll/store";
 import {createGlobalStyle, ThemeProvider} from "styled-components";
+import MontserratFont from "./font";
+
+// @ts-ignore
+// injectGlobal`
+//   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,900|Roboto');
+//   body {
+//     padding: 0;
+//     margin: 0;
+//     font-family: Roboto, sans-serif;
+//   }
+//   h1 {
+//     font-family: Montserrat;
+//   }
+// `
 
 
 const Global = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-  * {
+  
+  ${MontserratFont}
+  * {   
     margin: 0 auto;
     padding: 0;
     outline:0;
     box-sizing: border-box;
-    font-family: "Montserrat";
-  }`
+  }
+`
 
 const theme = {
+    colors: {
+        primary: "white",
+        secondary: "#2A172D",
+    },
     media: {
         phone: "(max-width: 375px)"
     }

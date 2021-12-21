@@ -7,7 +7,7 @@ const VacanciesHeader = () => {
     return (
         <>
             <Navbar/>
-            <SearchCandidateForm/></>
+           </>
     )
 }
 
