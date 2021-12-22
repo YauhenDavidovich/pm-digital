@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import BlockTitle from "../BlockTitle";
 import styled from "styled-components";
 import SelectVariants from "../Select";
@@ -7,6 +7,7 @@ import {AppRootStateType} from "../../bll/store";
 import {Summary} from "../../dal/api";
 import {getSummariesTC} from "../../bll/summariesReducer";
 import SummaryCard from "./SummaryCard";
+import Paginator from "../Pagination";
 
 export const StyledSummaryBlock = styled.div`
   
@@ -36,12 +37,22 @@ export const StyledSummaryBlock = styled.div`
 
 const SummariesBlock = () => {
     const dispatch = useDispatch()
+    const [page, setPage] = useState(1);
     const summaries = useSelector<AppRootStateType, Array<Summary>>(state => state.summaries)
     useEffect(
         () => {
             dispatch(getSummariesTC())
         }, []
     )
+    const getPaginatedCards= (summaries: Array<Summary>) => {
+        const offset = (page-1) * 5;
+        return summaries.slice(offset, offset + 5);
+    }
+
+    const renderArticles = () => {
+        return getPaginatedCards(summaries);
+    }
+
 
     const vacancy= "продавец-консультант"
 
@@ -55,7 +66,7 @@ const SummariesBlock = () => {
                     <SelectVariants/>
                 </div>
                 <div>
-                    {summaries.map(summary => {
+                    {renderArticles().map(summary => {
                         return <SummaryCard
                             key={summary.id}
                             id={summary.id.toString()}
@@ -69,6 +80,7 @@ const SummariesBlock = () => {
                         />
                     })}
                 </div>
+                <Paginator currentPage={page} pages={summaries.length} setPage={setPage}/>
 
 
             </div>
