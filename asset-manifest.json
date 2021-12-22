@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/pm-digital/static/css/main.19cb8c5d.css",
-    "main.js": "/pm-digital/static/js/main.8f4144ca.js",
+    "main.css": "/pm-digital/static/css/main.18e28fa5.css",
+    "main.js": "/pm-digital/static/js/main.14eca097.js",
     "static/js/787.05845fe9.chunk.js": "/pm-digital/static/js/787.05845fe9.chunk.js",
+    "static/media/Laptop.png": "/pm-digital/static/media/Laptop.6e9b528cc73d9f7893c8.png",
+    "static/media/Group.png": "/pm-digital/static/media/Group.a6092f4beceab56bd38d.png",
+    "static/media/revicons.eot": "/pm-digital/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/pm-digital/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/pm-digital/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/pm-digital/index.html",
-    "main.19cb8c5d.css.map": "/pm-digital/static/css/main.19cb8c5d.css.map",
-    "main.8f4144ca.js.map": "/pm-digital/static/js/main.8f4144ca.js.map",
+    "main.18e28fa5.css.map": "/pm-digital/static/css/main.18e28fa5.css.map",
+    "main.14eca097.js.map": "/pm-digital/static/js/main.14eca097.js.map",
     "787.05845fe9.chunk.js.map": "/pm-digital/static/js/787.05845fe9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.19cb8c5d.css",
-    "static/js/main.8f4144ca.js"
+    "static/css/main.18e28fa5.css",
+    "static/js/main.14eca097.js"
   ]
 }
