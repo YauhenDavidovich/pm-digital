@@ -4,10 +4,9 @@ import styled from "styled-components";
 import SelectVariants from "../Select";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootStateType} from "../../bll/store";
-import {Summary, Vacancy} from "../../dal/api";
-import {getVacanciesTC} from "../../bll/vacanciesReducer";
-import VacanciesCard from "../vacancies/VacancieCard";
+import {Summary} from "../../dal/api";
 import {getSummariesTC} from "../../bll/summariesReducer";
+import SummaryCard from "./SummaryCard";
 
 export const StyledSummaryBlock = styled.div`
   
@@ -57,10 +56,16 @@ const SummariesBlock = () => {
                 </div>
                 <div>
                     {summaries.map(summary => {
-                        return <VacanciesCard
+                        return <SummaryCard
                             key={summary.id}
                             id={summary.id.toString()}
-                            title={summary.first_name}
+                            firstName={summary.first_name}
+                            vacancy={summary.category}
+                            birthday={summary.birthday}
+                            online={summary.visibility}
+                            previousWork={summary.workexperience}
+                            updated={summary.updated_at}
+                            workCity={summary.work_city}
                         />
                     })}
                 </div>
