@@ -8,6 +8,8 @@ export interface SearchCandidateFormProps {
     justify?: string
     margin?: string
     height?: string
+    backgroundButtonColor?: string
+    textButtonColor?: string
 }
 
 const StyledSearchCandidateForm = styled.div<SearchCandidateFormProps>`
@@ -31,7 +33,7 @@ const SearchCandidateForm = (props: SearchCandidateFormProps) => {
         <StyledSearchCandidateForm {...props}>
             <CustomInput placeholder={'🔍 На какую должность ищете кандидата?'} width='410px'/>
             <CustomInput placeholder={'Город'} width='205px'/>
-            <SearchButton color={"white"}>Найти кандидатов</SearchButton>
+            <SearchButton background={props.backgroundButtonColor} color={props.textButtonColor}>Найти кандидатов</SearchButton>
         </StyledSearchCandidateForm>
 
     )

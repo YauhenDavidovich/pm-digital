@@ -8,6 +8,7 @@ import thirdIcon from "../../assets/icons/AliExpressIcon.png";
 import fourthIcon from "../../assets/icons/OnlyFansIcon.png";
 import fifthIcon from "../../assets/icons/VerizonCommunicationsIcon.png";
 import sixIcon from "../../assets/icons/TheHeraldJournalIcon.png";
+import BlockTitle from "../BlockTitle";
 
 type StyledPartnersBlockProp = {
     width?: string
@@ -61,7 +62,7 @@ const Partners = () => {
     return (
         <BackgroundColorWrapper>
             <StyledPartnersBlock>
-                <h3>Нас выбрали</h3>
+                <BlockTitle title1={'Нас выбрали'}/>
                 <div>
                     <ul className={"partnersBox"}>
                         <PartnersIconCard src={firstIcon}/>

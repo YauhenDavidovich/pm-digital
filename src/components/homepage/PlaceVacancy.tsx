@@ -45,7 +45,7 @@ const PlaceVacancy = () => {
                 <div><img src={Astronaut}
                           alt="Astronaut"/></div>
                 <div className={'placeVacancyText'}>
-                    <BlockTitle title={'Разместить вакансию'}/>
+                    <BlockTitle title1={'Разместить вакансию'}/>
                     <div><h4>Работодатель смогут найти вас и предложить отличную работу.</h4></div>
                 </div>
 

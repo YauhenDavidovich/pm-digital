@@ -13,9 +13,10 @@ export interface StyledNavbarProp {
     justify?: string
     margin?: string
     height?: string
+    fonBackgroundColor?: string
 }
 
-const StyledNav = styled.div<StyledNavbarProp>`
+const StyledNav = styled.div<StyledNavbarProp>`  
   display: flex;
   flex-direction: ${props => props.direction || 'row'};
   align-items: ${props => props.align || 'stretch'};
@@ -34,7 +35,7 @@ const StyledNav = styled.div<StyledNavbarProp>`
 
 const Navbar = (props: StyledNavbarProp) => {
 
-    return <BackgroundColorWrapper backgroundColor={"#251427"}>
+    return <BackgroundColorWrapper backgroundColor={props.fonBackgroundColor}>
         <StyledNav {...props} align={"center"}>
             <FlexWrapper color={'white'} maxWidth={"289px"} justify={"space-between"}>
                 <NavBarElement alignSelfEnd><Link component={RouterLink} to={"/vacancies/"} color="white" underline="none">

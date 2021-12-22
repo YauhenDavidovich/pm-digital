@@ -10,7 +10,7 @@ import AppDownload from "./AppDownload";
 const HomePage = () => {
     return (
         <>
-            <Navbar justify={"space-between"}/>
+            <Navbar justify={"space-between"} fonBackgroundColor={"#251427"}/>
             <Banner/>
             <VacanciesAmountBanner/>
             <Partners/>

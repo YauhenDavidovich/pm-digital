@@ -64,7 +64,7 @@ const AppDownload = () => {
                 <div className={"mobileImage"}><img src={Astronaut}
                                                     alt="Astronaut"/></div>
                 <div className={'downloadText'}>
-                    <BlockTitle title={'Скачивайте приложение'}/>
+                    <BlockTitle title1={'Скачивайте приложение'}/>
                     <div><h4>Работодатели смогут найти вас и предложить отличную работу.</h4></div>
                 </div>
                 <div className={"buttonsBlock"}>

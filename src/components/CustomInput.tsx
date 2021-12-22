@@ -24,7 +24,12 @@ const Input = styled.input<InputFieldInput>`
     font-size: 16px;
     max-width: 335px;
   }
-  
+
+  @media ${props => props.theme.media.tablet} {
+    font-size: 16px;
+    max-width: 300px;
+
+
 `;
 
 

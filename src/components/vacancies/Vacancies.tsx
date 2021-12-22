@@ -1,16 +1,12 @@
 import React from 'react';
-import VacanciesHeader from "./VacanciesHeader";
-import VacanciesContainer from "./VacanciesContainer";
-import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 
 const Vacancies = () => {
     return (
-        <div>
-            <VacanciesHeader/>
-            <VacanciesContainer/>
-            <Footer/>
-        </div>
+        <>
+            <Navbar justify={"space-between"} fonBackgroundColor={'#000046'}/>
+        </>
     )
 }
 

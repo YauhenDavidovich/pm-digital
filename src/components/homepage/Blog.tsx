@@ -49,7 +49,7 @@ const Blog = () => {
         <BackgroundColorWrapper>
             <StyledPlaceVacancy>
                 <div className={'blogText'}>
-                    <BlockTitle title={'Блог'}/>
+                    <BlockTitle title1={'Блог'}/>
                     <div><h4>All articles</h4></div>
                 </div>
                 <div className={"carouselWrapper"}><CarouselContainer/></div>
