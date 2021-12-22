@@ -9,7 +9,7 @@ const StyledSummariesWrapper = styled.div`
   max-width: 1240px;
   width: 100%;
   margin-top: 60px;
-  
+  margin-bottom: 60px;
 `
 
 const SummariesWrapper = () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from "../Navbar";
 import SummariesHeader from "./SummaryHeader";
 import SummariesWrapper from "./SummariesWrapper";
+import Footer from "../Footer";
 
 const Summaries = () => {
     return (
@@ -9,6 +10,7 @@ const Summaries = () => {
             <Navbar fonBackgroundColor={"#000046"}/>
             <SummariesHeader/>
             <SummariesWrapper/>
+            <Footer/>
         </div>
     );
 };
