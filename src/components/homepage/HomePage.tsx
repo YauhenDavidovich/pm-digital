@@ -5,6 +5,7 @@ import VacanciesAmountBanner from "./VacanciesAmountBanner";
 import Partners from "./Partners";
 import PlaceVacancy from "./PlaceVacancy";
 import Blog from "./Blog";
+import AppDownload from "./AppDownload";
 
 const HomePage = () => {
     return (
@@ -15,6 +16,7 @@ const HomePage = () => {
             <Partners/>
             <PlaceVacancy/>
             <Blog/>
+            <AppDownload/>
 
         </>
 

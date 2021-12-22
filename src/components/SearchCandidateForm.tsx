@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import {Box, TextField} from "@mui/material";
 import SearchButton from "./Button";
-import StyledTextField from "./SearchFieldInput";
-import InputAdornment from '@mui/material/InputAdornment';
 import CustomInput from "./CustomInput";
 
 export interface SearchCandidateFormProps {

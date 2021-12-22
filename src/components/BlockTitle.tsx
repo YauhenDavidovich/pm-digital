@@ -11,17 +11,22 @@ type StyledTitleProps = {
 
 
 const StyledTitle = styled.div<StyledTitleProps>`
-  align: left;
+  
   h2 {
     color: ${props => props.color || props.theme.colors.secondary};
     font-size: ${props => props.fontSize || '32px'};
     font-weight: 700;
+    position: relative;
     text-transform: uppercase;
   }
   
-  .line {    
-    border-bottom: 1px solid #000046;
-    width: 84px;
+  .line {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    border-bottom: 1px solid #2a172d;
+    width: 170px;
+    background: #2a172d;
   }
 
   @media ${props => props.theme.media.phone} {
@@ -31,8 +36,7 @@ const StyledTitle = styled.div<StyledTitleProps>`
 
 const BlockTitle = (props: StyledTitleProps) => {
     return <StyledTitle {...props}>
-        <div className={'line'}/>
-        <h2>{props.title}</h2>
+        <h2>{props.title}<div className={'line'}/></h2>
     </StyledTitle>
 
 };

@@ -9,7 +9,7 @@ type StyledPlaceVacancyProps = {
 
 }
 
-const StyledPlaceVacancy = styled.div<StyledPlaceVacancyProps>`
+export const StyledPlaceVacancy = styled.div<StyledPlaceVacancyProps>`
   display: flex;
   width: 100%;
   max-width: 1240px;

@@ -1,39 +1,37 @@
 import React from "react";
-import {styled} from "@mui/system";
-import {Link as RouterLink} from 'react-router-dom';
-import {Card, CardActions, CardContent, CardMedia, Link, Typography} from "@mui/material";
-
-
-const StyledCard = styled(Card, {
-    name: "StyledCard",
-    slot: "Wrapper"
-})({
-    color: "#6B8068",
-    background: '#FFFFFF',
-    border: '1px solid #EAEAEA',
-    boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.05)',
-    marginBottom: 45,
-    borderRadius: 5,
-    maxWidth: 400,
-    width: "100%",
-    height: 304,
-    position: 'relative',
-});
+import styled from "styled-components";
+import {Card, CardContent, CardMedia, Typography} from "@mui/material";
 
 
 type ArticleType = {
-    id: number,
+    id: string,
     title: string,
     imageUrl: string,
     date: string
+    children?: React.ReactNode
 }
 
-
+const StyledCard = styled(Card)<ArticleType>`
+  color: #222222;
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  margin-bottom: 45px;
+  padding: 5px;
+  border-radius: 5px;
+  max-width: 397px;
+  width: 100%;
+  height: 304px;
+  position: relative;  
+  @media (max-width:600px) {
+    max-width: 334px;
+    height: 304px;
+  }
+`
 
 const Article = (props: ArticleType) => {
 
     return (
-        <StyledCard key={props.id}>
+        <StyledCard key={props.id} {...props}>
             <CardMedia
                 component="img"
                 height="201"
@@ -45,7 +43,7 @@ const Article = (props: ArticleType) => {
                 <Typography gutterBottom variant="subtitle1" component="div">
                     {props.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2">
                     {props.date}
                 </Typography>
             </CardContent>
