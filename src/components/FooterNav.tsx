@@ -46,8 +46,6 @@ const StyledFooterNav = styled.div`
     line-height: 20px;
     text-transform: capitalize;
   }
-
-
 `
 
 

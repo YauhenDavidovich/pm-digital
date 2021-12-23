@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import BackgroundColorWrapper from "./BackgroundColorWrapper";
 import FooterNav from "./FooterNav";
+import FooterSocial from "./FooterSocial";
 
 const StyledFooter = styled.div`
   position: relative;
@@ -16,6 +17,7 @@ const Footer = () => {
         <BackgroundColorWrapper backgroundColor={"#000046"}>
             <StyledFooter>
                 <FooterNav/>
+                <FooterSocial/>
             </StyledFooter>
         </BackgroundColorWrapper>
 
