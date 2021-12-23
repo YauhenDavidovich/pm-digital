@@ -39,6 +39,7 @@ const StyledPartnersBlock = styled.div<StyledPartnersBlockProp>`
   .partnersBox {
     padding: 0px;
     display: grid;
+    margin-top: 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
   }

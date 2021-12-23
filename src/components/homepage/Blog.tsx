@@ -24,7 +24,10 @@ const StyledPlaceVacancy = styled.div<StyledPlaceVacancyProps>`
   @media ${props => props.theme.media.phone} {
     flex-direction: column;
   }
-
+.articles {
+  margin: 20px 10px;
+}
+  
   h4 {
     font-size: 14px;
     font-weight: 400;
@@ -50,7 +53,7 @@ const Blog = () => {
             <StyledPlaceVacancy>
                 <div className={'blogText'}>
                     <BlockTitle title1={'Блог'}/>
-                    <div><h4>All articles</h4></div>
+                    <div className={"articles"}><a href="/" ><h4>All articles</h4></a></div>
                 </div>
                 <div className={"carouselWrapper"}><CarouselContainer/></div>
             </StyledPlaceVacancy>

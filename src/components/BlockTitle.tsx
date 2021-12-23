@@ -13,7 +13,7 @@ type StyledTitleProps = {
 
 
 const StyledTitle = styled.div<StyledTitleProps>`
-  
+  margin: 20px 10px;
   h2 {
     color: ${props => props.color || props.theme.colors.secondary};
     font-size: ${props => props.fontSize || '32px'};
