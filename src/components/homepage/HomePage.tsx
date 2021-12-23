@@ -6,6 +6,7 @@ import Partners from "./Partners";
 import PlaceVacancy from "./PlaceVacancy";
 import Blog from "./Blog";
 import AppDownload from "./AppDownload";
+import Footer from "../Footer";
 
 const HomePage = () => {
     return (
@@ -17,7 +18,7 @@ const HomePage = () => {
             <PlaceVacancy/>
             <Blog/>
             <AppDownload/>
-
+            <Footer/>
         </>
 
     )

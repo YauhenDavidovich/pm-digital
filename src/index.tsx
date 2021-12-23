@@ -9,20 +9,6 @@ import {store} from "./bll/store";
 import {createGlobalStyle, ThemeProvider} from "styled-components";
 import MontserratFont from "./font";
 
-// @ts-ignore
-// injectGlobal`
-//   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,900|Roboto');
-//   body {
-//     padding: 0;
-//     margin: 0;
-//     font-family: Roboto, sans-serif;
-//   }
-//   h1 {
-//     font-family: Montserrat;
-//   }
-// `
-
-
 const Global = createGlobalStyle`
   
   ${MontserratFont}

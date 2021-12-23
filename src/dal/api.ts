@@ -1,15 +1,15 @@
 import axios from "axios"
 
 const instance = axios.create({
-    baseURL: "http://135.181.30.244:27007/api/",
+    baseURL: "https://cors-everywhere.herokuapp.com/http://135.181.30.244:27007/api/",
 })
 
 export const API = {
     getVacancies() {
-        return instance.get<ResponseType<Vacancy>>('vacancies/vacancies',)
+        return instance.get<ResponseType<Vacancy>>('vacancies/vacancies/',)
     },
     getSummaries() {
-        return instance.get<ResponseType<Summary>>('summaries',)
+        return instance.get<ResponseType<Summary>>('summaries/',)
     }
 }
 
